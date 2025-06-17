@@ -2,6 +2,7 @@ import { FaSearch } from "react-icons/fa";
 import Footer from "../Components/footer";
 import { useState } from "react"
 import Card from "../Components/Card";
+import { cardDetails } from '../Components/Carlist'
 
 const Home = () => {
 
@@ -42,7 +43,18 @@ const Home = () => {
           Search
         </button>
       </div>
-      <Card />
+      <div>
+        {cardDetails.map((car, index) => (
+          <Card 
+            key={index}
+            name={car.brand}
+            price={car.price}
+            brand={car.brand}
+            image={car.image}            
+          />
+        ))}
+      </div>
+      {/* <Card /> */}
       <Footer />
     </div>
   )

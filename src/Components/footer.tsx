@@ -26,7 +26,7 @@ const Footer = () => {
     { label: "Youtube", icon: <FaYoutube />, href: "#" },
   ]
   return (
-    <div className="bg-blue-950 text-gray-400">
+    <div className="bg-blue-950 text-gray-400 bottom-0  w-full">
       <div className="flex flex-col justify-center items-center lg:flex-row lg:justify-between p-3 mt-10 gap-8">
        <div>
         <p className="mb-2 font-bold text-xl">Useful links</p>
