@@ -43,7 +43,7 @@ const Home = () => {
           Search
         </button>
       </div>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-center w-full ">
         {cardDetails.map((car, index) => (
           <Card 
             key={index}
