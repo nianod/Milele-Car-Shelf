@@ -7,11 +7,23 @@ import { cardDetails } from '../Components/Carlist'
 const Home = () => {
 
   const [searchTerm, setSearchTerm] = useState('')
+  const [warning, setWarning] = useState(false)
+  const [inputValue, setInputValue] = useState('')
+
   const handleApi = (e: React.FormEvent) => {
     e.preventDefault()
-    getCars()
-  }
 
+    if(inputValue.trim() === "") {
+      setWarning(true)
+      setTimeout(() => {
+        setWarning(false)
+      }, 4000);
+      return
+    }
+    setWarning(false)
+    // getCars()
+  }
+  
     const getCars = async () => {
       try {
         const response = await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMake/${searchTerm}?format=json`)
@@ -34,6 +46,8 @@ const Home = () => {
           className="outline-none w-full"
           type="text"
           placeholder="Search A Car By Brand or Model"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
         />
         <button
           onClick={handleApi}
@@ -43,6 +57,9 @@ const Home = () => {
           Search
         </button>
       </div>
+      {warning && (
+        <p className="text-red-500 text-center">Please enter a car brand</p>
+      )}
       <div className="flex flex-wrap justify-center w-full ">
         {cardDetails.map((car, index) => (
           <Card 
