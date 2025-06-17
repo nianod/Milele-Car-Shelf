@@ -22,7 +22,7 @@ const Nav = () => {
         <button className="p-2 bg-red-500 rounded cursor-pointer hover:bg-red-400 font-bold text-white">Sign In</button>
        </div>
     </div>
-  );
-};
+  )
+}
 
 export default Nav;  

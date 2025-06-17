@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom"
 
 interface Props  {
     name:string,
@@ -8,6 +9,13 @@ interface Props  {
 
 const Card = ({name,price,brand,image}: Props) => {
 
+    const navigate = useNavigate()
+
+    const seeDetails = (e: React.FormEvent) => {
+        e.preventDefault()
+        navigate('/details', {state: { name, price, brand, image } })
+    }
+
   return (
     <div className="mt-4">
         <div className="m-2 border-[1.5px] p-2 w-fit rounded-2xl border-gray-400">
@@ -16,7 +24,7 @@ const Card = ({name,price,brand,image}: Props) => {
             <h1 className="font-bold">{name}</h1>
             <span className="flex justify-between">
                 <b><span className="text-gray-500">Brand: </span>{brand}</b>
-                <button className="bg-blue-800 text-white rounded-xl cursor-pointer p-[1.5px] hover:bg-blue-700">View Details</button>
+                <button onClick={seeDetails} className="bg-blue-800 text-white rounded-xl cursor-pointer p-[1.5px] hover:bg-blue-700">View Details</button>
             </span>
         </div>
     </div>
