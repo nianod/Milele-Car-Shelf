@@ -1,4 +1,5 @@
 import { FaSearch } from "react-icons/fa";
+import Footer from "../Components/footer";
 
 const Home = () => {
   const handleApi = (e: React.FormEvent) => {
@@ -23,6 +24,7 @@ const Home = () => {
           Search
         </button>
       </div>
+      <Footer />
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import Nav from './Components/Nav'
 import Home from './Pages/Home'
-import Footer from './Components/footer'
 
 const App = () => {
 
@@ -9,7 +8,6 @@ const App = () => {
     <div>
       <Nav />
       <Home />
-      <Footer />
     </div>
   )
 }
