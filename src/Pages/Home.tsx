@@ -1,6 +1,7 @@
 import { FaSearch } from "react-icons/fa";
 import Footer from "../Components/footer";
-import { useState } from "react";
+import { useState } from "react"
+import Card from "../Components/Card";
 
 const Home = () => {
 
@@ -41,6 +42,7 @@ const Home = () => {
           Search
         </button>
       </div>
+      <Card />
       <Footer />
     </div>
   )
