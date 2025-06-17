@@ -10,11 +10,13 @@ const Footer = () => {
   ]
   const brands = [
     { label: "Maserati" },
-    { label: "Mercedez-GLM" },
+    { label: "Mercedec-GLM" },
     { label: "Ferrari" },
     { label: "QX-80" },
     { label: "Range-Rover-2025" },
-    { label: "Mc-Laren" },
+    { label: "Tesla-G63" },
+    { label: "Formula 1" },
+    { label: "BMW" },
   ]
   const SocialMeadia = [
     { label: "Instagram", icon: <FaInstagram /> , href: "#" },
@@ -25,7 +27,7 @@ const Footer = () => {
   ]
   return (
     <div className="bg-blue-950 text-gray-400">
-      <div className="flex flex-col justify-center lg:flex-row lg:justify-between p-3 mt-10 gap-8">
+      <div className="flex flex-col justify-center items-center lg:flex-row lg:justify-between p-3 mt-10 gap-8">
        <div>
         <p className="mb-2 font-bold text-xl">Useful links</p>
         {footerContents.map((item, index) => (
