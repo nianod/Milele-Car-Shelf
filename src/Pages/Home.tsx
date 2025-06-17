@@ -43,18 +43,17 @@ const Home = () => {
           Search
         </button>
       </div>
-      <div>
+      <div className="flex flex-wrap">
         {cardDetails.map((car, index) => (
           <Card 
             key={index}
-            name={car.brand}
+            name={car.name}
             price={car.price}
             brand={car.brand}
             image={car.image}            
           />
         ))}
       </div>
-      {/* <Card /> */}
       <Footer />
     </div>
   )
