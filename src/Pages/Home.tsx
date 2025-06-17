@@ -6,7 +6,7 @@ import { cardDetails } from '../Components/Carlist'
 
 const Home = () => {
 
-  const [searchTerm, setSearchTerm] = useState('')
+  //const [searchTerm, setSearchTerm] = useState('')
   const [warning, setWarning] = useState(false)
   const [inputValue, setInputValue] = useState('')
 
@@ -24,18 +24,18 @@ const Home = () => {
     // getCars()
   }
   
-    const getCars = async () => {
-      try {
-        const response = await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMake/${searchTerm}?format=json`)
-          if(!response.ok) {
-            throw new Error ("Not found")
-          }
-          const data = await response.json()
-          console.log(data.results)
-      } catch(err) {
-        console.log("there was an error fetching the data")
-      }
-    }    
+    // const getCars = async () => {
+    //   try {
+    //     const response = await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMake/${searchTerm}?format=json`)
+    //       if(!response.ok) {
+    //         throw new Error ("Not found")
+    //       }
+    //       const data = await response.json()
+    //       console.log(data.results)
+    //   } catch(err) {
+    //     console.log("there was an error fetching the data")
+    //   }
+    // }    
 
 
   return (
