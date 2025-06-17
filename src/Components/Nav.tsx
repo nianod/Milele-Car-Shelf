@@ -8,7 +8,7 @@ const Nav = () => {
 }
 
   return (
-    <div className="flex gap-2 bg-blue-950 items-center p-2 justify-between">
+    <div className="flex gap-2 bg-blue-950 items-center p-2 justify-between fixed top-0 z-50 w-full">
       <div className="flex items-center gap-2">
         <img
          className="rounded-full w-10 h-10 fit-cover"

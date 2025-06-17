@@ -15,9 +15,9 @@ const Card = () => {
      }
   return (
     <div>
-        <img src={cardDetails.image} alt="Audi" />
+        <img src={cardDetails.image} alt="Audi" className="w-70 h-50 object-cover"/>
         <h1>{cardDetails.name}</h1>
-        <b>{cardDetails.Price}</b>
+        <b>$ {cardDetails.Price}</b>
         <p>{cardDetails.brand}</p>
     </div>
   )

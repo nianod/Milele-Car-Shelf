@@ -26,7 +26,7 @@ const Home = () => {
 
 
   return (
-    <div>
+    <div className="mt-15">
       <h2 className="font-bold text-xl m-2">Cars for Hire & Sale</h2>
       <div className="border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded w-[50%] flex justify-between m-auto p-1">
         <input
