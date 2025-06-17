@@ -1,4 +1,5 @@
 import Nav from './Components/Nav'
+import Home from './Pages/Home'
 
 const App = () => {
 
@@ -6,6 +7,7 @@ const App = () => {
   return (
     <div>
       <Nav />
+      <Home />
     </div>
   )
 }

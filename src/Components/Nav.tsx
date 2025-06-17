@@ -18,8 +18,8 @@ const Nav = () => {
         <h2 className="text-white font-bold">{head.title}</h2>
        </div>
        <div className="flex justify-center gap-2 items-center">
-        <button className="p-2 bg-blue-600 rounded cursor-pointer">Sign Up</button>
-        <button className="p-2 bg-red-600 rounded cursor-pointer">Sign In</button>
+        <button className="p-2 bg-blue-500 rounded cursor-pointer hover:bg-blue-400 font-bold text-white">Sign Up</button>
+        <button className="p-2 bg-red-500 rounded cursor-pointer hover:bg-red-400 font-bold text-white">Sign In</button>
        </div>
     </div>
   );
