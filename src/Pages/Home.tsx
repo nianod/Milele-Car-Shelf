@@ -1,11 +1,26 @@
 import { FaSearch } from "react-icons/fa";
 import Footer from "../Components/footer";
+import { useState } from "react";
 
 const Home = () => {
   const handleApi = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert("API Fetched");
-  };
+    e.preventDefault()
+    getCars()
+  }
+
+    const getCars = async () => {
+      try {
+        const response = await fetch('https://vpic.nhtsa.dot.gov/api/vehicles/GetAllMakes?format=json')
+          if(!response.ok) {
+            throw new Error ("No found")
+          }
+          const data = await response.json()
+          console.log(data.results)
+      } catch(err) {
+        console.log("there was an error fetching the data")
+      }
+    }    
+
 
   return (
     <div>
@@ -18,7 +33,7 @@ const Home = () => {
         />
         <button
           onClick={handleApi}
-          className="p-2 bg-gray-400 rounded cursor-pointer flex items-center gap-2 text-white"
+          className="p-2 bg-gray-400 rounded cursor-pointer flex items-center gap-2 text-white transition-all duration-300 ease-in-out hover:bg-amber-500"
         >
           <FaSearch />
           Search
@@ -26,7 +41,7 @@ const Home = () => {
       </div>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
 export default Home;

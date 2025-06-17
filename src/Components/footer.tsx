@@ -24,8 +24,9 @@ const Footer = () => {
     { label: "Youtube", icon: <FaYoutube />, href: "#" },
   ]
   return (
-    <div className="flex justify-between p-3 bg-blue-950 text-gray-400 mt-10">
-      <div className="gap-5">
+    <div className="bg-blue-950 text-gray-400">
+      <div className="flex flex-col justify-center lg:flex-row lg:justify-between p-3 mt-10 gap-8">
+       <div>
         <p className="mb-2 font-bold text-xl">Useful links</p>
         {footerContents.map((item, index) => (
           <a key={index} href={item.href}
@@ -50,7 +51,9 @@ const Footer = () => {
             <a key={index} href={item.href}>{item.icon}</a>
           )}      
         </div>
+      </div>       
       </div>
+        <p className="text-center mb-2">© 2025 | All Rights Reserved</p>
     </div>
   )
 }
