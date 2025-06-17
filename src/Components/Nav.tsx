@@ -8,14 +8,18 @@ const Nav = () => {
 }
 
   return (
-    <div>
-      <div className="flex gap-3 items-center">
+    <div className="flex gap-2 bg-blue-950 items-center p-2 justify-between">
+      <div className="flex items-center gap-2">
         <img
-         className="rounded-full w-15 h-15 fit-cover"
+         className="rounded-full w-10 h-10 fit-cover"
          src={head.imgUrl}
          alt="logo"
         />
-        <h2>{head.title}</h2>
+        <h2 className="text-white font-bold">{head.title}</h2>
+       </div>
+       <div className="flex justify-center gap-2 items-center">
+        <button className="p-2 bg-blue-600 rounded cursor-pointer">Sign Up</button>
+        <button className="p-2 bg-red-600 rounded cursor-pointer">Sign In</button>
        </div>
     </div>
   );
