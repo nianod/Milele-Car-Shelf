@@ -1,13 +1,21 @@
 # Car Shelf 🚗
-### A simple application to Buy, Sell and Hire Card
+
+### A simple modern plartform to Buy, Sell and Hire Cars
 
 
-How to run the Application on your Machine
+## Getting Started
 
-1. Fork a copy of your Repository and run the following commands
+1. Fork a copy of your own Repository(optional)
 
-```js
-npm install
+2. Clone the repo 
+    ```js
+    git clone https://github.com/nianod/milele-motors.git
+    
+    //Run the Following Commands
 
-npm run dev
-```
+    cd milele-motors
+
+    npm install
+
+    npm run dev
+    ```

@@ -6,7 +6,7 @@ const Nav = () => {
   const btns = [
     { label: "Buy", icon: <FaShoppingCart />, message: "You do not have enough Money to buy a Car" },
     { label: "Sell", icon: <FaTags />, message: "You do not have a Car to sell" },
-    { label: "Hire", icon: <FaUserTie />, message: "You do not have enough Money yo Hire a Car" }
+    { label: "Hire", icon: <FaUserTie />, message: "You do not have enough Money to Hire a Car" }
   ];
 
   const handleClick = (label: string, message: string) => {
