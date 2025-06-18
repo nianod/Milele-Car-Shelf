@@ -9,10 +9,13 @@ const Home = () => {
   //const [searchTerm, setSearchTerm] = useState('')
   const [warning, setWarning] = useState(false)
   const [inputValue, setInputValue] = useState('')
+  const [loading, setLoading] = useState(false)
+  const [error, SetError] = useState(false)
 
   const handleApi = (e: React.FormEvent) => {
     e.preventDefault()
-
+    setLoading(false)
+    
     if(inputValue.trim() === "") {
       setWarning(true)
       setTimeout(() => {
@@ -21,7 +24,14 @@ const Home = () => {
       return
     }
     setWarning(false)
-    // getCars()
+    setLoading(true)
+
+    setTimeout(() => {
+      setLoading(false)
+      SetError(true)
+    },3000)
+    
+    
   }
   
     // const getCars = async () => {
@@ -52,14 +62,19 @@ const Home = () => {
         <button
           onClick={handleApi}
           className="p-2 bg-gray-400 rounded cursor-pointer flex items-center gap-2 text-white transition-all duration-300 ease-in-out hover:bg-amber-500"
+         
         >
           <FaSearch />
-          Search
+            {loading ? "Searching..." : "Search"}
         </button>
       </div>
       {warning && (
         <p className="text-red-500 text-center">Please enter a car brand</p>
       )}
+      {error && (
+        <p className="text-red-500 text-center">Not Found</p>
+      )}
+
       <div className="flex flex-wrap justify-center w-full ">
         {cardDetails.map((car, index) => (
           <Card 

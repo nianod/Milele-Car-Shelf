@@ -1,8 +1,8 @@
-import Nav from './Components/Nav'
 import Home from './Pages/Home'
 import { Route, Routes } from 'react-router-dom'
 import Details from './Components/Details'
 import Layout from './Components/Layout'
+import Error from './Components/Error'
 
 const App = () => {
 
