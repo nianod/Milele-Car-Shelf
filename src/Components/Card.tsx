@@ -4,16 +4,17 @@ interface Props  {
     name:string,
     price: number,
     brand: string,
-    image: string
+    image: string,
+    description: string
 }
 
-const Card = ({name,price,brand,image}: Props) => {
+const Card = ({name,price,brand,image, description}: Props) => {
 
     const navigate = useNavigate()
 
     const seeDetails = (e: React.FormEvent) => {
         e.preventDefault()
-        navigate('/details', {state: { name, price, brand, image } })
+        navigate('/details', {state: { name, price, brand, image, description } })
     }
 
   return (

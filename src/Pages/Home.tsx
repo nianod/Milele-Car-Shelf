@@ -67,7 +67,8 @@ const Home = () => {
             name={car.name}
             price={car.price}
             brand={car.brand}
-            image={car.image}            
+            image={car.image}    
+            description= {car.description}        
           />
         ))}
       </div>
