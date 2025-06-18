@@ -1,6 +1,12 @@
-
+import { FaShoppingCart, FaTags, FaUserTie } from "react-icons/fa";
 
 const Nav = () => {
+
+  const btns = [
+    {label: "Buy", url: "", icon: <FaShoppingCart />},
+    {label: "Sell", url: "", icon: <FaTags />},
+    {label: "Hire", url: "", icon: <FaUserTie />}
+  ]
  
   const head = {
     title: "Milele motors",
@@ -16,6 +22,13 @@ const Nav = () => {
          alt="logo"
         />
         <h2 className="text-white font-bold">{head.title}</h2>
+       </div>
+       <div className="gap-3 flex text-xl text-white font-bold">
+            {btns.map((item, index) => (
+              <span className="flex items-center gap-1"> {item.icon}
+              <a key={index} href={item.url}>{item.label}</a>
+              </span>
+            ))}
        </div>
        <div className="flex justify-center gap-2 items-center">
         <button className="p-2 bg-blue-500 rounded cursor-pointer hover:bg-blue-400 font-bold text-white">Sign Up</button>
