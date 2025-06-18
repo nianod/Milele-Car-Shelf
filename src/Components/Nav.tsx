@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2'
 import { FaShoppingCart, FaTags, FaUserTie } from "react-icons/fa"
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 const Nav = () => {
   const btns = [
@@ -23,6 +23,11 @@ const Nav = () => {
   const head = {
     title: "Milele motors",
     imgUrl: "images.jpg"
+  }
+
+  const navigate = useNavigate()
+  const hendlerror = () => {
+    navigate ('/error')
   }
 
   return (
@@ -52,8 +57,8 @@ const Nav = () => {
       </div>
 
       <div className="flex justify-center gap-2 items-center">
-        <button className="p-2 bg-blue-500 rounded cursor-pointer hover:bg-blue-400 font-bold text-white">Sign Up</button>
-        <button className="p-2 bg-red-500 rounded cursor-pointer hover:bg-red-400 font-bold text-white">Sign In</button>
+        <button onClick={hendlerror} className="p-2 bg-blue-500 rounded cursor-pointer hover:bg-blue-400 font-bold text-white">Sign Up</button>
+        <button onClick={hendlerror} className="p-2 bg-red-500 rounded cursor-pointer hover:bg-red-400 font-bold text-white">Sign In</button>
       </div>
     </div>
   )
