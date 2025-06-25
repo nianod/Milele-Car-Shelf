@@ -61,7 +61,10 @@ const Home = () => {
         />
         <button
           onClick={handleApi}
-          className="p-2 bg-gray-400 rounded cursor-pointer flex items-center gap-2 text-white transition-all duration-300 ease-in-out hover:bg-amber-500"
+          className={`p-2 rounded bg-amber-500 flex items-center gap-2 text-white transition-all duration-300 ease-in-out hover:bg-amber-800
+              ${loading ? "cursor-not-allowed bg-amber-300"
+                 : "cursor-pointer  "
+              }`}
          
         >
           <FaSearch />
