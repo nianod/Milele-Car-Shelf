@@ -6,7 +6,6 @@ import { cardDetails } from '../Components/Carlist'
 
 const Home = () => {
 
-  //const [searchTerm, setSearchTerm] = useState('')
   const [warning, setWarning] = useState(false)
   const [inputValue, setInputValue] = useState('')
   const [loading, setLoading] = useState(false)
@@ -34,20 +33,6 @@ const Home = () => {
     
   }
   
-    // const getCars = async () => {
-    //   try {
-    //     const response = await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMake/${searchTerm}?format=json`)
-    //       if(!response.ok) {
-    //         throw new Error ("Not found")
-    //       }
-    //       const data = await response.json()
-    //       console.log(data.results)
-    //   } catch(err) {
-    //     console.log("there was an error fetching the data")
-    //   }
-    // }    
-
-
   return (
     <div className="mt-15">
       <h2 className="font-bold text-xl m-2">Cars for Hire & Sale</h2>
@@ -65,7 +50,6 @@ const Home = () => {
               ${loading ? "cursor-not-allowed bg-amber-300"
                  : "cursor-pointer  "
               }`}
-         
         >
           <FaSearch />
             {loading ? "Searching..." : "Search"}
